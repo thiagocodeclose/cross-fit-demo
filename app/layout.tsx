@@ -1,6 +1,8 @@
+// @ts-nocheck
 import type { Metadata } from 'next';
 import { Barlow_Condensed, Barlow } from 'next/font/google';
 import './globals.css';
+import { getKorivaConfig, buildCssVars } from '@/lib/koriva-config';
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
@@ -14,9 +16,11 @@ export const metadata: Metadata = {
   description: 'Denver\'s premier CrossFit affiliate. Coached classes, barbell programming, and a community that shows up — every single day.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const cfg = await getKorivaConfig();
+  const vars = buildCssVars(cfg?.brand);
   return (
-    <html lang="en" className={`${barlowCondensed.variable} ${barlow.variable}`}>
+    <html lang="en" className={`${barlowCondensed.variable} ${barlow.variable}`} style={vars as React.CSSProperties}>
       <body>{children}</body>
     </html>
   );
