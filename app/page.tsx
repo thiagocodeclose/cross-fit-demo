@@ -393,12 +393,12 @@ export default function CrossPage() {
           <h1 data-cg-el="hero_headline_1" className="cr-hero-title">
             Built for<br /><span>Athletes.</span>
           </h1>
-          <p className="cr-hero-sub">
+          <p data-cg-el="hero_subtitle" className="cr-hero-sub">
             Real coaching. Real programming. Real community. CrossIron is Denver&apos;s most results-driven CrossFit affiliate — where beginners become athletes and athletes break records.
           </p>
           <div className="cr-hero-actions">
-            <a href="#pricing" className="cr-btn-primary">Free Foundations Class</a>
-            <a href="#classes" className="cr-btn-ghost">View Schedule</a>
+            <a data-cg-el="hero_cta_primary" href="#pricing" className="cr-btn-primary">Free Foundations Class</a>
+            <a data-cg-el="hero_cta_secondary" href="#classes" className="cr-btn-ghost">View Schedule</a>
           </div>
           <div className="cr-hero-stats">
             {siteData.stats.map((s) => (
