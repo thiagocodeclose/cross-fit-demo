@@ -390,7 +390,7 @@ export default function CrossPage() {
         {/* RIGHT: Copy */}
         <div className="cr-hero-copy">
           <div className="cr-hero-tag">Denver, CO — Est. 2016</div>
-          <h1 className="cr-hero-title">
+          <h1 data-cg-el="hero_headline_1" className="cr-hero-title">
             Built for<br /><span>Athletes.</span>
           </h1>
           <p className="cr-hero-sub">
